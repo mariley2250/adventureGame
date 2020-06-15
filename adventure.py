@@ -38,22 +38,22 @@ def decision(location):
         selectionInput = input(question)
         if selectionInput == "1":
             if checkItems("sword") is True:
-                printPause("As the troll moves to attack, you unsheath your ",
+                printPause("As the troll moves to attack, you unsheath your "
                            "new sword.", delayTime)
-                printPause("The Sword of Ogoroth shines brightly in your ",
+                printPause("The Sword of Ogoroth shines brightly in your "
                            "hand as you brace yourself for the attack.",
                            delayTime)
-                printPause("But the troll takes one look at your shiny new ",
+                printPause("But the troll takes one look at your shiny new "
                            "toy and runs away!", delayTime)
-                printPause("You have rid the town of the troll. You are ",
+                printPause("You have rid the town of the troll. You are "
                            "victorious!", delayTime)
                 endGame()
             else:
                 printPause("You do your best...", delayTime)
                 if random.randint(1, 2) == 2:
-                    printPause("You inflict some damage to the troll but he ",
+                    printPause("You inflict some damage to the troll but he "
                                "is only slightly hurt", delayTime)
-                    printPause("The Troll pushes you back into the field and ",
+                    printPause("The Troll pushes you back into the field and "
                                "it runs back inside the house", delayTime)
                     printPause("You need to find a better weapon", delayTime)
                     field()
@@ -63,7 +63,7 @@ def decision(location):
                     printPause("You have been defeated!", delayTime)
                     endGame()
         elif selectionInput == "2":
-            printPause("You run back into the field. Luckily, you don't seem",
+            printPause("You run back into the field. Luckily, you don't seem"
                        " to have been followed.", delayTime)
             field()
         else:
@@ -74,11 +74,11 @@ def decision(location):
 
 def intro():
     items.clear()
-    printPause("You find yourself standing in an open field, filled with ",
-               "grass and yellow wildflowers.", delayTime)
-    printPause("Rumor has it that a troll is somewhere around here, and has",
+    printPause("You find yourself standing in an open field, filled with"
+               " grass and yellow wildflowers.", delayTime)
+    printPause("Rumor has it that a troll is somewhere around here, and has"
                " been terrifying the nearby village", delayTime)
-    printPause("In your hand you hold your trusty (but not very effective)"'
+    printPause("In your hand you hold your trusty (but not very effective)"
                " dagger.", delayTime)
     field()
 
@@ -93,14 +93,14 @@ def cave():
     printPause("You peer cautiously into the cave.", delayTime)
     printPause("It turns out to be only a very small cave.", delayTime)
     if checkItems("sword") is True:
-        printPause("You've been here before, and gotten all the good stuff.",
+        printPause("You've been here before, and gotten all the good stuff."
                    " It's just an empty cave now.", delayTime)
     else:
         printPause("Your eye catches a glint of metal behind a rock.",
                    delayTime)
         printPause("You have found the magical Sword of Ogoroth!", delayTime)
-        printPause("You discard your silly old dagger and take the sword with",
-                   "you.", delayTime)
+        printPause("You discard your silly old dagger and take the sword with"
+                   " you.", delayTime)
         items.append("sword")
     printPause("You walk back out to the field.", delayTime)
     field()
@@ -108,15 +108,15 @@ def cave():
 
 def house():
     printPause("You approach the door of the house.", delayTime)
-    printPause("You are about to knock when the door opens and out steps a",
-               "troll.", delayTime)
+    printPause("You are about to knock when the door opens and out steps a"
+               " troll.", delayTime)
     printPause("Eep! This is the troll's house!", delayTime)
     printPause("The troll attacks you!", delayTime)
     if checkItems("sword") is True:
         printPause("You arent bothered as your trusty sword with protect you.",
                    delayTime)
     else:
-        printPause("You feel a bit under-prepared for this, what with only",
+        printPause("You feel a bit under-prepared for this, what with only"
                    "having a tiny dagger.", delayTime)
     decision("house")
 
